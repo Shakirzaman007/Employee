@@ -1,9 +1,3 @@
-
-  document.getElementById("employeeForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Employee data submitted successfully!");
-  });
-
   document.getElementById("birthDate").addEventListener("change", function () {
     const birthDate = new Date(this.value);
     const today = new Date();
@@ -18,4 +12,9 @@
 
     document.getElementById("age").value = age >= 0 ? age : "";
   });
+
+  document.getElementById("employeeForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Employee data submitted successfully!");
+  })
 
