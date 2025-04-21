@@ -7,16 +7,22 @@
   <style>
     h2{
         color: rgb(23, 131, 23);
+        font-weight: 800;
     }
+    /* #employeeForm{
+        background-color: aqua;
+    } */
+
     .form-section {
       border: 2px solid rgb(23, 131, 23);
       padding: 10px;
       border-radius: 8px;
-      margin-bottom: 10px;
-      
+      margin-bottom: 10px; 
+      background-color: oldlace;  
     }
+
     .form-label {
-      font-weight: 500;   
+      font-weight: 700;   
     }
     
   </style>
@@ -37,7 +43,7 @@
       <div class="col-md-6 mb-3">
         <label for="ename" class="form-label">EName</label>
         <input type="text" placeholder="EName"  class="form-control" id="ename" required>
-      </div>
+    </div>
 
       <div class="col-md-6 mb-3">
         <label for="etype" class="form-label">EType</label>
@@ -52,6 +58,7 @@
         <select class="form-select" id="jobType">
           <option selected>Provisional</option>
           <option>Permanent</option>
+          <option>Intern</option>
         </select>
       </div>
 
@@ -59,6 +66,7 @@
         <label for="presentAddress" class="form-label">PresentAddress</label>
         <textarea class="form-control" placeholder="PresentAddress" id="presentAddress" rows="2"></textarea>
       </div>
+
       <div class="col-md-6 mb-3">
         <label for="permanentAddress" class="form-label">PermanentAddress</label>
         <textarea class="form-control" placeholder="PermanentAddress" id="permanentAddress" rows="2"></textarea>
@@ -68,6 +76,7 @@
         <label for="fatherName" class="form-label">FatherName</label>
         <input type="text" placeholder="FatherName" class="form-control" id="fatherName">
       </div>
+
       <div class="col-md-6 mb-3">
         <label for="motherName" class="form-label">MotherName</label>
         <input type="text" placeholder="MotherName" class="form-control" id="motherName">
@@ -82,10 +91,10 @@
         <label for="email" class="form-label">Email</label>
         <input type="email" placeholder="Email" class="form-control" id="email">
       </div>
-      
-    </div>
 
-    <div class="form-section row">
+    <!-- </div> -->
+
+    <!-- <div class="form-section row"> -->
       <div class="col-md-6 mb-3">
         <label for="birthDate" class="form-label">BirthDate</label>
         <input type="date" class="form-control" id="birthDate">
@@ -101,12 +110,12 @@
         <select class="form-select" id="bloodGroup">
           <option selected>-Not Mentioned-</option>
           <option>A+</option>
-          <option>B+</option>
-          <option>O+</option>
-          <option>AB+</option>
           <option>A-</option>
+          <option>B+</option>
           <option>B-</option>
+          <option>O+</option>
           <option>O-</option>
+          <option>AB+</option>
           <option>AB-</option>
         </select>
       </div>
