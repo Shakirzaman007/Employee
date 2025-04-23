@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Employee Data Entry</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
   <style>
     h2{
         color: rgb(23, 131, 23);
         font-weight: 800;
     }
-    /* #employeeForm{
-        background-color: aqua;
-    } */
-
+    
     .form-section {
       border: 2px solid rgb(23, 131, 23);
       padding: 10px;
@@ -37,12 +36,12 @@
 
       <div class="col-md-6 mb-3">
         <label for="eid" class="form-label">EID</label>
-        <input type="text"  class="form-control" id="eid" value="001">
+        <input type="text"  class="form-control" id="eid" value="EID">
       </div>
 
       <div class="col-md-6 mb-3">
-        <label for="ename" class="form-label">EName</label>
-        <input type="text" placeholder="EName"  class="form-control" id="ename" required>
+        <label for="eName" class="form-label">EName</label>
+        <input type="text" placeholder="EName"  class="form-control" id="eName" required>
     </div>
 
       <div class="col-md-6 mb-3">
@@ -56,8 +55,9 @@
       <div class="col-md-6 mb-3">
         <label for="jobType" class="form-label">Job Type</label>
         <select class="form-select" id="jobType">
-          <option selected>Provisional</option>
-          <option>Permanent</option>
+          <option selected>Permanent</option>
+          <option>Provisional</option>
+          
           <option>Intern</option>
         </select>
       </div>
@@ -108,7 +108,7 @@
       <div class="col-md-6 mb-3">
         <label for="bloodGroup" class="form-label">Blood Group</label>
         <select class="form-select" id="bloodGroup">
-          <option selected>-Not Mentioned-</option>
+          <option selected>Not Mentioned</option>
           <option>A+</option>
           <option>A-</option>
           <option>B+</option>
@@ -123,7 +123,7 @@
       <div class="col-md-6 mb-3">
         <label for="maritalStatus" class="form-label">MaritalStatus</label>
         <select class="form-select" id="maritalStatus">
-          <option selected>-Not Mentioned-</option>
+          <option selected>Not Mentioned</option>
           <option>Single</option>
           <option>Married</option>
         </select>
@@ -142,7 +142,7 @@
       <div class="col-md-6 mb-3">
         <label for="initialDesignation" class="form-label">InitialDesignation</label>
         <select class="form-select" id="initialDesignation">          
-          <option>-Select-</option>
+          <option selected>Select</option>
           <option>Intern</option>
           <option>Junior Officer</option>
           <option>Senior Officer</option>
