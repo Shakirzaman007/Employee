@@ -1,190 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Employee Data Entry</title>
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Employee Data Entry</title>
 
-  <style>
-    h2{
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <style>
+      h2 {
         color: rgb(23, 131, 23);
         font-weight: 800;
-    }
-    
-    .form-section {
-      border: 2px solid rgb(23, 131, 23);
-      padding: 10px;
-      border-radius: 8px;
-      margin-bottom: 10px; 
-      background-color: oldlace;  
-    }
+      }
 
-    .form-label {
-      font-weight: 700;   
-    }
-    
-  </style>
-</head>
-<body>
+      .form-section {
+        border: 2px solid rgb(23, 131, 23);
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        background-color: oldlace;
+      }
 
-<div class="container mt-5">
-  <h2 class="text-center mb-4">Employee Data Entry Form</h2>
+      .form-label {
+        font-weight: 700;
+      }
+    </style> -->
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Employee Data Entry Form</h2>
 
-  <form id="employeeForm">
-    <div class="form-section row">
+      <form id="employeeForm">
+        <div class="form-section row">
+          <div class="col-md-6 mb-3">
+            <label for="eid" class="form-label">EID</label>
+            <input type="text" class="form-control" id="eid" value="EID" />
+          </div>
 
-      <div class="col-md-6 mb-3">
-        <label for="eid" class="form-label">EID</label>
-        <input type="text"  class="form-control" id="eid" value="EID">
-      </div>
+          <div class="col-md-6 mb-3">
+            <label for="eName" class="form-label">EName</label>
+            <input
+              type="text"
+              placeholder="EName"
+              class="form-control"
+              id="eName"
+              required
+            />
+          </div>
 
-      <div class="col-md-6 mb-3">
-        <label for="eName" class="form-label">EName</label>
-        <input type="text" placeholder="EName"  class="form-control" id="eName" required>
+          <div class="col-md-6 mb-3">
+            <label for="etype" class="form-label">EType</label>
+            <select class="form-select" id="etype">
+              <option selected>In Door Stuff</option>
+              <option>Out Door Stuff</option>
+            </select>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="jobType" class="form-label">Job Type</label>
+            <select class="form-select" id="jobType">
+              <option selected>Permanent</option>
+              <option>Provisional</option>
+
+              <option>Intern</option>
+            </select>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="presentAddress" class="form-label"
+              >PresentAddress</label
+            >
+            <textarea
+              class="form-control"
+              placeholder="PresentAddress"
+              id="presentAddress"
+              rows="2"
+            ></textarea>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="permanentAddress" class="form-label"
+              >PermanentAddress</label
+            >
+            <textarea
+              class="form-control"
+              placeholder="PermanentAddress"
+              id="permanentAddress"
+              rows="2"
+            ></textarea>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="fatherName" class="form-label">FatherName</label>
+            <input
+              type="text"
+              placeholder="FatherName"
+              class="form-control"
+              id="fatherName"
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="motherName" class="form-label">MotherName</label>
+            <input
+              type="text"
+              placeholder="MotherName"
+              class="form-control"
+              id="motherName"
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="contractNo" class="form-label">ContractNo</label>
+            <input
+              type="text"
+              placeholder="ContractNo"
+              class="form-control"
+              id="contractNo"
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              placeholder="Email"
+              class="form-control"
+              id="email"
+            />
+          </div>
+
+          <!-- </div> -->
+
+          <!-- <div class="form-section row"> -->
+          <div class="col-md-6 mb-3">
+            <label for="birthDate" class="form-label">BirthDate</label>
+            <input type="date" class="form-control" id="birthDate" />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input
+              type="number"
+              placeholder="Age"
+              class="form-control"
+              id="age"
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="bloodGroup" class="form-label">Blood Group</label>
+            <select class="form-select" id="bloodGroup">
+              <option selected>Not Mentioned</option>
+              <option>A+</option>
+              <option>A-</option>
+              <option>B+</option>
+              <option>B-</option>
+              <option>O+</option>
+              <option>O-</option>
+              <option>AB+</option>
+              <option>AB-</option>
+            </select>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="maritalStatus" class="form-label">MaritalStatus</label>
+            <select class="form-select" id="maritalStatus">
+              <option selected>Not Mentioned</option>
+              <option>Single</option>
+              <option>Married</option>
+            </select>
+          </div>
+
+          <div class="col-md-12 mb-3">
+            <label for="letterRef" class="form-label">LetterRef</label>
+            <input
+              type="text"
+              class="form-control"
+              id="letterRef"
+              value="BENGALLIFE/HO/HR/APPOINTMENT/"
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="initialSalary" class="form-label">InitialSalary</label>
+            <input
+              type="number"
+              placeholder="InitialSalary"
+              class="form-control"
+              id="initialSalary"
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="initialDesignation" class="form-label"
+              >InitialDesignation</label
+            >
+            <select class="form-select" id="initialDesignation">
+              <option selected>Select</option>
+              <option>Intern</option>
+              <option>Junior Officer</option>
+              <option>Senior Officer</option>
+              <option>Manager</option>
+              <option>Managing Director</option>
+            </select>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="joiningDate" class="form-label">JoiningDate</label>
+            <input type="date" class="form-control" id="joiningDate" />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="provisionPeriod" class="form-label"
+              >ProvisionPeriod</label
+            >
+            <input
+              type="text"
+              placeholder="ProvisionPeriod"
+              class="form-control"
+              id="provisionPeriod"
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="reference" class="form-label">Reference</label>
+            <textarea
+              class="form-control"
+              placeholder="Reference"
+              id="reference"
+              rows="2"
+            ></textarea>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="otherQualification" class="form-label"
+              >OtherQualification</label
+            >
+            <input
+              type="text"
+              placeholder="OtherQualification"
+              class="form-control"
+              id="otherQualification"
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="remark" class="form-label">Remark</label>
+            <input
+              type="text"
+              placeholder="Remark"
+              class="form-control"
+              id="remark"
+            />
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-success px-5">Submit</button>
+        </div>
+      </form>
     </div>
 
-      <div class="col-md-6 mb-3">
-        <label for="etype" class="form-label">EType</label>
-        <select class="form-select" id="etype">
-          <option selected>In Door Stuff</option>
-          <option>Out Door Stuff</option>
-        </select>
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="jobType" class="form-label">Job Type</label>
-        <select class="form-select" id="jobType">
-          <option selected>Permanent</option>
-          <option>Provisional</option>
-          
-          <option>Intern</option>
-        </select>
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="presentAddress" class="form-label">PresentAddress</label>
-        <textarea class="form-control" placeholder="PresentAddress" id="presentAddress" rows="2"></textarea>
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="permanentAddress" class="form-label">PermanentAddress</label>
-        <textarea class="form-control" placeholder="PermanentAddress" id="permanentAddress" rows="2"></textarea>
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="fatherName" class="form-label">FatherName</label>
-        <input type="text" placeholder="FatherName" class="form-control" id="fatherName">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="motherName" class="form-label">MotherName</label>
-        <input type="text" placeholder="MotherName" class="form-control" id="motherName">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="contractNo" class="form-label">ContractNo</label>
-        <input type="text" placeholder="ContractNo" class="form-control" id="contractNo">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" placeholder="Email" class="form-control" id="email">
-      </div>
-
-    <!-- </div> -->
-
-    <!-- <div class="form-section row"> -->
-      <div class="col-md-6 mb-3">
-        <label for="birthDate" class="form-label">BirthDate</label>
-        <input type="date" class="form-control" id="birthDate">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="age" class="form-label">Age</label>
-        <input type="number" placeholder="Age" class="form-control" id="age">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="bloodGroup" class="form-label">Blood Group</label>
-        <select class="form-select" id="bloodGroup">
-          <option selected>Not Mentioned</option>
-          <option>A+</option>
-          <option>A-</option>
-          <option>B+</option>
-          <option>B-</option>
-          <option>O+</option>
-          <option>O-</option>
-          <option>AB+</option>
-          <option>AB-</option>
-        </select>
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="maritalStatus" class="form-label">MaritalStatus</label>
-        <select class="form-select" id="maritalStatus">
-          <option selected>Not Mentioned</option>
-          <option>Single</option>
-          <option>Married</option>
-        </select>
-      </div>
-
-      <div class="col-md-12 mb-3">
-        <label for="letterRef" class="form-label">LetterRef</label>
-        <input type="text" class="form-control" id="letterRef" value="BENGALLIFE/HO/HR/APPOINTMENT/">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="initialSalary" class="form-label">InitialSalary</label>
-        <input type="number" placeholder="InitialSalary" class="form-control" id="initialSalary">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="initialDesignation" class="form-label">InitialDesignation</label>
-        <select class="form-select" id="initialDesignation">          
-          <option selected>Select</option>
-          <option>Intern</option>
-          <option>Junior Officer</option>
-          <option>Senior Officer</option>
-          <option>Manager</option>
-          <option>Managing Director</option>         
-        </select>
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="joiningDate" class="form-label">JoiningDate</label>
-        <input type="date" class="form-control" id="joiningDate">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="provisionPeriod" class="form-label">ProvisionPeriod</label>
-        <input type="text" placeholder="ProvisionPeriod" class="form-control" id="provisionPeriod">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="reference" class="form-label">Reference</label>
-        <textarea class="form-control" placeholder="Reference" id="reference" rows="2"></textarea>
-      </div>
-      
-      <div class="col-md-6 mb-3">
-        <label for="otherQualification" class="form-label">OtherQualification</label>
-        <input type="text" placeholder="OtherQualification" class="form-control" id="otherQualification">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <label for="remark" class="form-label">Remark</label>
-        <input type="text" placeholder="Remark" class="form-control" id="remark">
-      </div>
-    </div>
-
-    <div class="text-center">
-      <button type="submit" class="btn btn-success px-5">Submit</button>
-    </div>
-
-  </form>
-</div>
-
-<script src="employee.js"></script>
-
-</body>
+    <script src="employee.js"></script>
+  </body>
 </html>

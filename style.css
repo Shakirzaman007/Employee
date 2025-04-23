@@ -1,0 +1,16 @@
+h2 {
+    color: rgb(23, 131, 23)!important;
+    font-weight: 800;
+}
+
+.form-section {
+  border: 2px solid rgb(23, 131, 23);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px; 
+  background-color: oldlace;  
+}
+
+.form-label {
+  font-weight: 700;   
+}
