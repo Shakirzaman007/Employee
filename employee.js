@@ -22,7 +22,6 @@
     document.getElementById("eid").value = currentEID;
   }
   
-  // Run on page load
   window.onload = function () {
     generateEID();
   };
@@ -30,12 +29,11 @@
   document.getElementById("employeeForm").addEventListener("submit", function (e) {
     e.preventDefault();
   
-    // List of required field IDs
     const requiredFields = [
       "eName", "presentAddress", "permanentAddress",
       "fatherName", "motherName", "contractNo", 
       "email", "birthDate", "bloodGroup", "initialSalary","initialDesignation",
-      "joiningDate", "provisionPeriod", "reference"
+      "joiningDate", "provisionPeriod", "reference" , "remark" , "otherQualification"
     ];
   
     let firstEmptyField = null;
@@ -44,7 +42,7 @@
     requiredFields.forEach((fieldId) => {
       const field = document.getElementById(fieldId);
       if (field.value.trim() === "") {
-        field.classList.add("is-invalid"); // Bootstrap red border
+        field.classList.add("is-invalid");
         if (!firstEmptyField) {
           firstEmptyField = field;
         }
@@ -57,15 +55,15 @@
     if (!allValid) {
       if (firstEmptyField) {
         firstEmptyField.focus();
-        // firstEmptyField.scrollIntoView({ behavior: "smooth", block: "center" });
+        firstEmptyField.scrollIntoView({ behavior: "smooth", block: "center" });
       }
       alert("Please fill all required fields.");
       return;
     }
+    else{
+      alert("Submitted successfully. " + currentEID);
+    }
   
-    alert("Submitted successfully. " + currentEID);
-  
-    // Increment EID for next entry
     currentEID++;
     document.getElementById("employeeForm").reset();
     generateEID();
